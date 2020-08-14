@@ -20,4 +20,5 @@ public class InstrutorEntity {
 
     @Column(name = "VL_HORA")
     private Double valorHora;
+
 }

@@ -22,13 +22,14 @@ public class AlunoService {
         entity.setCpf(alunoDTO.getCpf());
 
         //TODO validar se o CPF existe no banco antes de existir, caso exista retornar mensagem de erro
+        if (alunoDTO.getCpf().)
 
+        if(alunoDTO.getCpf() != null && alunoDTO.getNome() != null ) {
+            entity = alunoRepository.save(entity);
+        }
 
-
-
-        entity = alunoRepository.save(entity);
-
-        ResultData resultData = new ResultData(HttpStatus.CREATED.value(), "Aluno cadastrado com sucesso", entity.getIdAluno());
+        ResultData resultData = new ResultData(HttpStatus.CREATED.value(),
+                "Aluno cadastrado com sucesso", entity.getIdAluno());
         return ResponseEntity.status(HttpStatus.CREATED).body(resultData);
     }
 }

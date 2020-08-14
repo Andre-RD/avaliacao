@@ -8,4 +8,5 @@ public class CursoDTO {
     private String nome;
 
     private Integer cargaHoraria;
+
 }
